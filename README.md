@@ -1,3 +1,7 @@
+# Daily Culinary — Italian Food 2000 (fixed)
+
+This package fixes the blank-page issue caused by a mismatch between the HTML element IDs and the JavaScript.
+
 # Daily Culinary — Italian Food 2000
 
 This update expands the latest Daily Culinary app to **2,000 discovery cards**.
