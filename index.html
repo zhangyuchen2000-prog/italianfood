@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#17211d">
-  <meta name="description" content="Reviewed recipes, source-extracted pairing profiles, concise Italian food culture and culinary science notes.">
-  <link rel="manifest" href="manifest.json">
+  <meta name="description" content="Recipes, exact pairing profiles, Italian food culture and culinary science.">
+  <link rel="manifest" href="manifest-r2.json">
   <link rel="apple-touch-icon" href="icon.svg">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-r2.css?v=2">
   <title>Daily Culinary — Italian Library</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
     <header class="topbar">
       <div>
         <p class="eyebrow">DAILY CULINARY</p>
-        <h1>Italian food, carefully edited.</h1>
+        <h1>Italian food, properly sourced.</h1>
         <p id="libraryCount" class="library-count"></p>
       </div>
     </header>
@@ -40,6 +40,7 @@
       <article id="card" class="card">
         <figure id="imageWrap" class="image-wrap" hidden>
           <img id="image" alt="">
+          <figcaption id="imageCaption"></figcaption>
         </figure>
 
         <div class="content">
@@ -50,7 +51,7 @@
           <p id="source" class="source"></p>
           <h2 id="title"></h2>
           <p id="subtitle" class="subtitle"></p>
-          <div id="body"></div>
+          <div id="body"><div class="loading-state">Loading the culinary library…</div></div>
 
           <div class="actions">
             <button id="next" class="primary">Next unseen</button>
@@ -79,7 +80,31 @@
     </main>
   </div>
 
-  <script src="cards.js"></script>
-  <script src="app.js"></script>
+
+  <script>
+    window.CULINARY_BUILD = "italian-library-r2";
+    window.addEventListener("error", function (event) {
+      const body = document.getElementById("body");
+      if (body && !window.CULINARY_APP_STARTED) {
+        body.innerHTML =
+          '<div class="load-error"><strong>The content files did not load.</strong>' +
+          '<p>Check that <code>cards-r2.js</code> and <code>app-r2.js</code> are in the repository root, then refresh.</p></div>';
+      }
+    });
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        if (!window.CULINARY_APP_STARTED) {
+          const body = document.getElementById("body");
+          if (body) {
+            body.innerHTML =
+              '<div class="load-error"><strong>The app is still using mismatched cached files.</strong>' +
+              '<p>Refresh once more. This version uses new filenames so the old cache cannot be reused.</p></div>';
+          }
+        }
+      }, 2500);
+    });
+  </script>
+  <script src="cards-r2.js?v=2"></script>
+  <script src="app-r2.js?v=2"></script>
 </body>
 </html>

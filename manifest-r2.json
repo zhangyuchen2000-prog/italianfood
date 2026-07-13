@@ -1,0 +1,15 @@
+{
+  "name": "Daily Culinary \u2014 Italian Library R2",
+  "short_name": "Italian Food",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#e9ece7",
+  "theme_color": "#17211d",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
