@@ -1,45 +1,41 @@
-# Daily Culinary — Italian Food 2000 (fixed)
+# Daily Culinary — Italian Library (rebuilt)
 
-This package fixes the blank-page issue caused by a mismatch between the HTML element IDs and the JavaScript.
+This version replaces the padded 2,000-card prototype.
 
-# Daily Culinary — Italian Food 2000
+## What changed
 
-This update expands the latest Daily Culinary app to **2,000 discovery cards**.
+- Real recipe cards from *Made in Sicily*
+- Classic recipe notes extracted from *Italian Food*
+- Exact ingredient profiles and exact Flavor Affinities from *The Flavor Bible*
+- Regional cards from *Why Italians Love to Talk About Food*
+- A small, non-repetitive applied science section
+- Search, category filters, unseen-first browsing, saved cards and learned progress
+- Images are used only when a source recipe/chapter actually contains one
 
-## Coverage
+## Imported cards
 
-- Culture: **82**
-- Food Science: **180**
-- Ingredient: **320**
-- Pairing: **768**
-- Recipe: **291**
-- Technique: **291**
-- Vocabulary: **68**
+Total: **944**
 
-## Source integration
+- Recipe: **149**
+- Classic Recipe: **412**
+- Pairing Profile: **320**
+- Food Culture: **38**
+- Food Science: **25**
 
-The content structure combines and transforms ideas from the user's uploaded collection:
+## Extraction audit
 
-- *Italian Food*
-- *Made in Sicily*
-- *Why Italians Love to Talk About Food*
-- *The Flavor Bible*
-- *Estela*
-- *On Food and Cooking*
+- Made in Sicily recipes: **149**
+- Italian Food classic recipe notes: **412**
+- The Flavor Bible exact profiles: **320**
+- Food culture cards: **38**
+- Food science cards: **25**
 
-The app uses concise original summaries and exercises rather than copying long passages from the books.
+## Important difference
 
-## Features retained
+The Flavor Bible section no longer creates random combinations. Each profile shows pairings and Flavor Affinities that belong to the selected ingredient in the source.
 
-- Random Next discovery
-- unseen-first browsing before repetition
-- category filters
-- Save and Learned
-- local progress
-- installable Home Screen app
-- offline cache
-- book imagery
+Made in Sicily cards retain the ingredient lists and present a shortened method for study. Italian Food cards reflect Elizabeth David's prose-recipe format.
 
-## GitHub update
+## GitHub
 
-Upload every file and the complete `images` folder to the root of the existing repository. Replace the old files. Because this version changes the service worker cache, refresh the browser after deployment or remove and add the Home Screen icon again if an older cached version remains.
+Upload all files and the complete `images` folder. Replace the previous version. The new `cards.js` file is required.

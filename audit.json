@@ -1,0 +1,17 @@
+{
+  "total": 944,
+  "types": {
+    "Recipe": 149,
+    "Classic Recipe": 412,
+    "Pairing Profile": 320,
+    "Food Culture": 38,
+    "Food Science": 25
+  },
+  "sources": {
+    "made_in_sicily_recipes": 149,
+    "italian_food_recipe_notes": 412,
+    "flavor_bible_profiles": 320,
+    "culture_cards": 38,
+    "science_cards": 25
+  }
+}
