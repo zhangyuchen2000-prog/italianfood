@@ -1,10 +1,9 @@
 {
   "name": "Daily Culinary",
   "short_name": "Culinary",
-  "description": "One new recipe, technique or food-science lesson each day.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#eef1ec",
+  "background_color": "#e9ece7",
   "theme_color": "#17211d",
   "icons": [
     {
