@@ -2,9 +2,9 @@
 const cards = window.CULINARY_CARDS || [];
 const $ = id => document.getElementById(id);
 const key = {
-  viewed: "culinary-rebuilt-viewed",
-  saved: "culinary-rebuilt-saved",
-  learned: "culinary-rebuilt-learned"
+  viewed: "culinary-reviewed-viewed",
+  saved: "culinary-reviewed-saved",
+  learned: "culinary-reviewed-learned"
 };
 const get = (k, fallback=[]) => {
   try { return JSON.parse(localStorage.getItem(k)) ?? fallback; }
@@ -205,7 +205,7 @@ $("search").addEventListener("input", event => {
   else $("body").innerHTML = `<div class="empty">No results for this search.</div>`;
 });
 
-$("libraryCount").textContent = `${cards.length.toLocaleString()} quality-checked cards · real recipes · exact source pairings`;
+$("libraryCount").textContent = `${cards.length.toLocaleString()} reviewed cards · incomplete extracts removed · sources clearly labelled`;
 renderSaved();
 renderStats();
 renderCard(nextCard() || cards[0]);

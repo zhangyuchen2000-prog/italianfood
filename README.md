@@ -1,41 +1,32 @@
-# Daily Culinary — Italian Library (rebuilt)
+# Daily Culinary — Reviewed Italian Library
 
-This version replaces the padded 2,000-card prototype.
+This is a conservative rebuilt edition of the uploaded 944-card app.
 
-## What changed
+## Reviewed library
 
-- Real recipe cards from *Made in Sicily*
-- Classic recipe notes extracted from *Italian Food*
-- Exact ingredient profiles and exact Flavor Affinities from *The Flavor Bible*
-- Regional cards from *Why Italians Love to Talk About Food*
-- A small, non-repetitive applied science section
-- Search, category filters, unseen-first browsing, saved cards and learned progress
-- Images are used only when a source recipe/chapter actually contains one
+Total: **787 cards**
 
-## Imported cards
+- Sicilian recipes: **61**
+- Italian classic recipe notes: **343**
+- Ingredient pairing profiles: **320**
+- Food culture: **38**
+- Food science: **25**
 
-Total: **944**
+## What was changed
 
-- Recipe: **149**
-- Classic Recipe: **412**
-- Pairing Profile: **320**
-- Food Culture: **38**
-- Food Science: **25**
+- Removed **88** Sicilian recipe cards containing visibly truncated text.
+- Removed **69** classic cards that were truncated, depended on missing page references, or were essays/product notes rather than self-contained recipes.
+- Rewrote all **38** culture cards as concise paraphrases. Long quotations, footnote numbers, incomplete sentences and the generic unrelated study note were removed.
+- Rewrote all **25** science cards. The aubergine card now explains the porous structure and precooking/salting mechanism instead of attributing the source claim to cool oil or crowding.
+- Kept the **320** structured pairing profiles, removed duplicate values, and added a clear warning that a source affinity is not a rule for one finished dish.
+- Changed the service worker so a missing legacy image cannot prevent the app from updating.
 
-## Extraction audit
+## Source limits
 
-- Made in Sicily recipes: **149**
-- Italian Food classic recipe notes: **412**
-- The Flavor Bible exact profiles: **320**
-- Food culture cards: **38**
-- Food science cards: **25**
+The uploaded package contained the app extraction, not standalone copies of *Made in Sicily*, *Italian Food* or *The Flavor Bible*. Those three sections were therefore checked for internal completeness and extraction defects, not claimed as a new page-by-page transcription of the books. Incomplete entries were deleted rather than guessed.
 
-## Important difference
+The food-science section was rewritten with the available *On Food and Cooking* source in mind. The culture section was rewritten from the extracted passages already present in the uploaded data.
 
-The Flavor Bible section no longer creates random combinations. Each profile shows pairings and Flavor Affinities that belong to the selected ingredient in the source.
+## Upload to GitHub
 
-Made in Sicily cards retain the ingredient lists and present a shortened method for study. Italian Food cards reflect Elizabeth David's prose-recipe format.
-
-## GitHub
-
-Upload all files and the complete `images` folder. Replace the previous version. The new `cards.js` file is required.
+Upload every file in this folder. Keep your existing `images` folder if you still want the old recipe and culture photographs. The new service worker will no longer fail when an image is absent.

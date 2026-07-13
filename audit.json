@@ -1,17 +1,32 @@
 {
-  "total": 944,
+  "edition": "reviewed-v2",
+  "original_total": 944,
+  "reviewed_total": 787,
   "types": {
-    "Recipe": 149,
-    "Classic Recipe": 412,
+    "Recipe": 61,
+    "Classic Recipe": 343,
     "Pairing Profile": 320,
     "Food Culture": 38,
     "Food Science": 25
   },
-  "sources": {
-    "made_in_sicily_recipes": 149,
-    "italian_food_recipe_notes": 412,
-    "flavor_bible_profiles": 320,
-    "culture_cards": 38,
-    "science_cards": 25
+  "changes": {
+    "recipe_cards_removed_for_truncation": 88,
+    "classic_cards_removed_as_truncated_non_self_contained_or_referential": 69,
+    "culture_cards_fully_rewritten": 38,
+    "science_cards_fully_rewritten": 25,
+    "pairing_profiles_structurally_cleaned": 320
+  },
+  "automated_checks": {
+    "unique_ids": true,
+    "no_ellipsis_or_truncation_markers": true,
+    "no_dangling_colons": true,
+    "no_visible_trailing_footnote_numbers": true,
+    "service_worker_core_cache_does_not_require_images": true
+  },
+  "source_scope": {
+    "food_science": "rewritten as practical paraphrases informed by the available Harold McGee source",
+    "food_culture": "rewritten as concise paraphrases of the uploaded extracted passages",
+    "recipes_and_classic_recipes": "integrity-reviewed from the uploaded app extraction; incomplete entries removed rather than guessed",
+    "pairing_profiles": "structured extraction retained and deduplicated; interpretation note added"
   }
 }

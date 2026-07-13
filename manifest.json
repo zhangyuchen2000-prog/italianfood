@@ -1,6 +1,6 @@
 {
-  "name": "Daily Culinary \u2014 Italian Library",
-  "short_name": "Italian Food",
+  "name": "Daily Culinary — Reviewed Italian Library",
+  "short_name": "Italian Library",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#e9ece7",
