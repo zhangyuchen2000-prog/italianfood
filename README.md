@@ -1,13 +1,41 @@
-# Daily Culinary v2
+# Daily Culinary — Italian Food 2000
 
-New features:
+This update expands the latest Daily Culinary app to **2,000 discovery cards**.
+
+## Coverage
+
+- Culture: **82**
+- Food Science: **180**
+- Ingredient: **320**
+- Pairing: **768**
+- Recipe: **291**
+- Technique: **291**
+- Vocabulary: **68**
+
+## Source integration
+
+The content structure combines and transforms ideas from the user's uploaded collection:
+
+- *Italian Food*
+- *Made in Sicily*
+- *Why Italians Love to Talk About Food*
+- *The Flavor Bible*
+- *Estela*
+- *On Food and Cooking*
+
+The app uses concise original summaries and exercises rather than copying long passages from the books.
+
+## Features retained
+
 - Random Next discovery
-- No repeats until the current category has been explored
-- Recipe, Skills, Science and Ingredient filters
-- Images from your personal cookbook library
-- 12 starter discoveries
-- Saved, learned and discovered tracking
+- unseen-first browsing before repetition
+- category filters
+- Save and Learned
+- local progress
+- installable Home Screen app
+- offline cache
+- book imagery
 
-Upload every file and the entire `images` folder to the root of your existing GitHub repository, then commit. GitHub Pages will update automatically.
+## GitHub update
 
-The included book images are for your private learning app. Do not redistribute the original books or publish the images as a commercial image library.
+Upload every file and the complete `images` folder to the root of the existing repository. Replace the old files. Because this version changes the service worker cache, refresh the browser after deployment or remove and add the Home Screen icon again if an older cached version remains.
